@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customerInput</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/check_page.css">
+</head>
+
+<body>
+    <div class="container pl-5 pr-5">
+        <div class="icon">
+            <img src="image/brandmark.jpg" alt="">
+        </div>
+
+        <div>
+            <h4 class="title">訂購人</h4>
+            <!-- 建立表單 -->
+            <form class="input_form" id="form">
+                <input type="text" name="cusName" value="" placeholder="姓名" id="cusName" autofocus><br>
+                <input type="tel" name="cusPhone" value="" placeholder="連絡電話" id="cusPhone"><br>
+                <!-- size: 一個數字指定欄位顯示寬度 (characters wide)確認輸入正確 -->
+                <input type="email" name="cusEmail" value="" placeholder="電子郵件" id="cusEmail"><br>
+                <!-- <label>今日日期
+                <input type="date" value="2021-12-4"></label> -->
+            </form>
+
+        </div>
+
+        <div>
+            <h4 class="title" id="choose_product">選購區</h4>
+        </div>
+        <div class="container row d-flex justify-content-between productCard">
+            <div class=" card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header wrapper">
+                    <img src="image/product1.jpg" class="img-fluid card-img-top" alt="...">
+                </div>
+                <div class="card-body text-secondary">
+
+                    <h5 id="productName">招牌泡菜</h5>
+                    <p class="card-text text-dark" id="priceTags">NT$220</p>
+                </div>
+
+                <div class="my_button card-footer">
+                    <!-- <div class="btn-group card-footer " role="group" aria-label="Basic example"> -->
+                    <input type="button" value="-" id="minus" onclick="handleMinus_one()">
+
+                    <span id="quantity_one" class="price_space">0</span>
+
+                    <!-- //這裡要有數字可以更變的 -->
+
+                    <input type="button" value="+" id="add" onclick="handlePlus_one()">
+                    <!-- </div> -->
+                </div>
+            </div>
+            <!-- 以上是第一個商品 -->
+
+            <!-- 其他商品 -->
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header wrapper">
+                    <img src="image/product2.jpg" class="image-fluid card-img-top" alt="...">
+                </div>
+
+                <div class="card-body text-secondary">
+
+                    <h5 id="productName">黃金泡菜</h5>
+                    <p class="card-text text-dark" id="priceTags">NT$220</p>
+                </div>
+
+                <div class="my_button card-footer">
+                    <input type="button" value="-" id="minus" onclick="handleMinus()">
+                    <span id="quantity_two" class="price_space">0</span>
+                    <input type="button" value="+" id="add" onclick="handlePlus()">
+                </div>
+            </div>
+
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header wrapper">
+                    <img src="image/product3.jpg" class="image-fluid card-img-top" alt="...">
+                </div>
+
+                <div class="card-body text-secondary">
+
+                    <h5 id="productName">黃金海帶絲</h5>
+                    <p class="card-text text-dark" id="priceTags">NT$220</p>
+                </div>
+
+                <div class="my_button card-footer">
+                    <input type="button" value="-" id="minus" onclick="handleMinus_three()">
+                    <span id="quantity_three" class="price_space">0</span>
+                    <input type="button" value="+" id="add" onclick="handlePlus_three()">
+                </div>
+            </div>
+
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header wrapper">
+                    <img src="image/product4.jpg" class="image-fluid card-img-top" alt="...">
+                </div>
+
+                <div class="card-body text-secondary">
+
+                    <h5 id="productName">韓式泡菜</h5>
+                    <p class="card-text text-dark" id="priceTags">NT$220</p>
+                </div>
+
+                <div class="my_button card-footer">
+                    <input type="button" value="-" id="minus" onclick="handleMinus()">
+                    <span id="quantity_two" class="price_space">0</span>
+                    <input type="button" value="+" id="add" onclick="handlePlus()">
+                </div>
+            </div>
+
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header wrapper">
+                    <img src="image/product5.jpg" class="image-fluid card-img-top" alt="...">
+                </div>
+
+                <div class="card-body text-secondary">
+
+                    <h5 id="productName">韓式結頭菜</h5>
+                    <p class="card-text text-dark" id="priceTags">NT$220</p>
+                </div>
+
+                <div class="my_button card-footer">
+                    <input type="button" value="-" id="minus" onclick="handleMinus()">
+                    <span id="quantity_two" class="price_space">0</span>
+                    <input type="button" value="+" id="add" onclick="handlePlus()">
+                </div>
+            </div>
+
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header wrapper">
+                    <img src="image/product6.jpg " class="image-fluid card-img-top" alt="...">
+                </div>
+
+                <div class="card-body text-secondary">
+
+                    <h5 id="productName">泰涮嘴青木瓜</h5>
+                    <p class="card-text text-dark" id="priceTags">NT$220</p>
+                </div>
+
+                <div class="my_button card-footer">
+                    <input type="button" value="-" id="minus" onclick="handleMinus()">
+                    <span id="quantity_two" class="price_space">0</span>
+                    <input type="button" value="+" id="add" onclick="handlePlus()">
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container pl-5 pr-5 cus_action">
+        <!-- <input type="button" onclick="cusAction()" value="立即訂購" id="cusAction"> -->
+        <input type="button" onclick="cusAction()" value="立即訂購" id="cusAction">
+    </div>
+    <!-- //連結下一個網頁按鈕 -->
+    <!-- <button onclick="document.location='check_page.html'">前往</button> -->
+
+    <br><br><br><br><br><br><br>
+    <!-- 確認畫面 -->
+    <div class="container pl-5 pr-5 " id="second_page">
+        <h4 class="title" id="cus_data"><b>您的訂單</b></h4>
+        <div class="data_space">
+            <p class="container" id="valueInput"></p>
+        </div>
+        <!-- <P>姓名:陳宣穎</P>
+        id="cusName"
+        <P>聯絡電話:陳宣穎</P> -->
+        <!-- id="cusPhone" -->
+        <!-- <P>電子郵件:陳宣穎</P> -->
+        <!-- id="cusEmail" -->
+        <!-- </div> -->
+
+        <!-- <input type="button" onclick="sum()" value="測試數量" id="cusTest"> -->
+        <!-- 數量 -->
+        <!-- <p id="bear"></p> -->
+        <!-- 小計 -->
+        <!-- <p id="apple"></p> -->
+
+        <div class="item_all">
+            <div id="order">
+                <div class="item_header special_header">
+                    <div class="picture col-3">&nbsp</div>
+                    <div class="item_detail col-3">品項</div>
+                    <div class="number col-3">數量</div>
+                    <div class="amount col-3">小計</div>
+                </div>
+                <!-- 要重複的地方 -->
+                <div class="item_header item_body">
+                    <div class="picture col-3">
+                        <img src="image/product1.jpg" alt="">
+                    </div>
+                    <div class="item_detail col-3">
+                        <div class="name">招牌泡菜</div>
+                        <div class="price"><span>NT$</span>220</div>
+                    </div>
+                    <!-- 想用成淺色字 -->
+                    <div class="number col-3"><span id="bear"></span></div>
+                    <div class="amount col-3"><span>NT$</span><span id="apple"></span></div>
+                </div>
+                <!-- 結束 要重複的地方 -->
+
+                <div class="item_header item_body">
+                    <div class="picture col-3">
+                        <img src="image/product3.jpg" alt="">
+                    </div>
+                    <div class="item_detail col-3">
+                        <div class="name">黃金海帶絲</div>
+                        <div class="price"><span>NT$</span>220</div>
+                    </div>
+                    <div class="number col-3"><span id="cat"></span></div>
+                    <div class="amount col-3"><span>NT$</span><span id="dog"></span></div>
+                </div>
+            </div>
+            <div class="item_body small_total" id="total_money">
+                <p class="col-3 pt-3">合計:</p>
+                <span id="small_total"></span>
+            </div>
+            <div class="item_body small_total" id="coupon">
+                <p class="col-3 pt-3">優惠折扣:</p>
+                <span id=""></span>
+            </div>
+
+
+            <div class="item_body small_total" id="all_money">
+                <p class="col-3 pt-3">總金額:</p>
+                <span id="final_money"></span>
+            </div>
+
+        </div>
+        <div>
+            <form class="container pl-0 pr-4 note_space">
+                <input class="note" type="text" placeholder="訂單備註:" id="note">
+            </form>
+            <div class=" finish_button">
+                <button onclick="move_back()">繼續購物</button>
+                <button id="finishButton">確認完成</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p>訂購成功</p>
+
+                    <i class="fa fa-check-circle"></i>
+                    <button id="closeButton" type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <h4>感謝您的訂購٩(๑❛ᴗ❛๑)۶</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/my_main.js"></script>
+
+</body>
+
+</html>

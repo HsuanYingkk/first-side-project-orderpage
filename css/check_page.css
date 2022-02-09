@@ -1,0 +1,346 @@
+*{
+    font-family: "Microsoft JhengHei","STHeiti",sans-serif;
+}
+
+.icon img{
+    width: 200px;
+    height: 180px;
+    /* margin-top: 10px; */
+}
+
+.title{
+    text-align: center;
+    font-size: 20px;
+}
+
+.input_form{
+    width: 100%;
+    max-width:1015px;
+    margin: 0 auto;
+    /* margin-top: 5em; */
+    /* align-items: center;  */
+    font-size: 14pt;
+    line-height: 1.1;
+}
+
+input[type=text],input[type=tel],input[type=email]{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    border-radius: 4px;
+    resize: vertical; 
+}
+
+body{
+    background-color:white;
+}
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 280px;
+    height: 280px;
+  }
+  
+/* .wrapper::after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  } */
+  
+  .wrapper img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+    position: absolute;
+    left:50%;
+    top:0px;
+    transform: translateX(-50%);
+  }
+
+
+  /* .wrapper .product6{
+    width: 100px;
+    height: 100px;
+  }
+  .wrapper .product6 img{
+    width: auto;
+    height: auto;
+    position: absolute;
+    left:100%;
+  } */
+
+  .productCard{
+      margin: 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+  }
+  .price_space{
+      padding: 0px 1.2em 0px 1.2em;
+  }
+  .my_button{
+      text-align: center;
+      color:black;
+      font-size: 18px;
+     width: 100%;
+  }
+  .my_button input[type=button]{
+    width: 32px;
+    height: 32px;
+    background-color:white;
+    color:#402624;
+    /* font-size :20px; */
+    font-weight:bold; 
+    border:solid #402624 1.5px;
+    border-radius:10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px 0px rgba(75, 40, 40, 0.2)inset, 0px 0px 9px 2px rgba(58, 26, 26, 0.19)inset;
+} 
+.my_button input[type=button]:hover{
+    margin: 0 auto;
+    width: 32px;
+    height:32px;
+    background-color:#402624;
+    color:white;
+    /* font-size :20px; */
+    font-weight:bold; 
+    border:solid #402624 1.5px;
+    border-radius:10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) inset, 0 6px 20px 0 rgba(0,0,0,0.19)inset;
+} 
+.cus_action{
+    margin-top: 3%;
+    text-align:center;
+}
+.cus_action input{
+    width: 150px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    font-weight: 500;
+    font-size: 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+  .cus_action input{
+    background: #000;
+    color: #fff;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .cus_action input:hover{
+    background: transparent;
+    color: #000;
+     box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+  }
+  .cus_action input:before,.cus_action input:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #000;
+    transition:400ms ease all;
+  }
+  .cus_action input:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .cus_action input:hover:before,.cus_action input:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+/* 我是分隔線 */
+#cus_data{
+ margin-top:10em;
+}
+.data_space{
+    width:100%;
+    height:40;
+    font-size: 14pt;
+    /* border: solid #eeeeee; */
+    padding-top: 15px;
+}
+#order{
+    background-color:#fff;
+    max-width:1015px;
+}
+.item_all{
+    border: solid #eeeeee ;
+    background-color:#fff;
+    max-width:1015px;
+    width:100%;
+    height: auto;
+}   
+.item_header{
+    display: flex;
+    /* justify-content:center; */
+    height: 30px;
+}
+.special_header{
+    background-color: #eeeeee;
+}
+.item_header div{
+    width:100%;
+    color:black;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+/* .item_header .item_detail{
+    width: 50%;
+} */
+.item_body{
+    width: 98%;
+    margin:auto;
+    height: 120px;
+    align-items: center; 
+    background-color: #fff;   
+    border-bottom: solid 2px #eeeeee  ;
+}
+
+.picture img{
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+    /* margin-top: 10px; */
+    float: left;
+}
+
+/* .item_detail.price{
+    color:darkgray;
+} */
+#total_money,#all_money{
+    border-bottom:none;
+}
+#total_money,#all_money,#coupon{
+    height: 50px;
+}
+#all_money{
+    font-size: 18px;
+    font-weight: bold;
+}
+.small_total{
+    display: flex;
+    justify-content:space-between;
+}
+/* .note_space{
+    width:100%;
+    max-width:1015px;
+    height: 80px;
+    border-radius: none;
+    border: solid 2em #eeeeee;
+} */
+#note{
+    width:100%;
+    min-width:385px;
+    max-width:1014px;
+    height: 80px;
+    /* margin: 10 0; */
+    margin-top:10px; 
+    border-radius: 0;
+    line-height: 4em;
+    /* margin-top: 5em; */
+    /* align-items: center;  */
+    /* font-size: 12pt;
+    padding: 0 40px 1.1em 1em; */
+}
+
+.finish_button{
+    text-align: center;
+    margin-top: 3%;
+}
+.finish_button button{
+    width: 150px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    font-weight: 500;
+    font-size: 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+  .finish_button button{
+    background: #000;
+    color: #fff;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .finish_button button:hover{
+    background: transparent;
+    color: #000;
+     box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+  }
+  .finish_button button:before,.finish_button button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #000;
+    transition:400ms ease all;
+  }
+  .finish_button button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .finish_button button:hover:before,.finish_button button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  .modal {
+    font-family: "Microsoft JhengHei", "STHeiti", sans-serif;
+  }
+.modal-header {
+    /* background-color: #eeeeee; */
+    color: black;
+    text-align:center;
+    font-size: 2.5em;
+}
+
+.close {
+    color: black;
+    font-size: 1em;
+}
+
+.modal-header {
+    height: 150px;
+    /* align-items: flex-start; */
+    justify-content: center;
+    
+}
+
+.modal-header p {
+    font-size: 18px;
+}
+
+.modal-header i {
+    font-size: 2em;
+    color: silver;
+    padding-top: 40px;
+    padding-left: 15px;
+}
